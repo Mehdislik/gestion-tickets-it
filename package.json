@@ -1,0 +1,23 @@
+{
+  "name": "gestion-tickets-it",
+  "version": "1.0.0",
+  "description": "Ce projet est un PoC pour un système de gestion des tickets IT, intégrant GitHub, Jenkins, SonarQube et Kubernetes.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
