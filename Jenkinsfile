@@ -15,7 +15,7 @@ pipeline {
     stage('Checkout') {
       steps {
         // Utilisation du token GitHub pour cloner le repository si nécessaire
-        git url: 'https://github.com/votre_nom_utilisateur/gestion-tickets-it.git'
+        git url: 'https://github.com/Mehdislik/gestion-tickets-it.git'
       }
     }
     stage('Install Dependencies & Test') {
