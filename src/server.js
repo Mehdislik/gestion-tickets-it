@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
+
 // Middleware pour parser le JSON
 app.use(express.json());
 
@@ -37,6 +38,12 @@ app.delete('/tickets/:id', (req, res) => {
   res.json({ message: "Ticket supprimé" });
 });
 
-app.listen(port, () => {
-  console.log(`Serveur en écoute sur le port ${port}`);
-});
+// Only start the server if this module is the main module
+if (require.main === module) {
+    app.listen(port, () => {
+      console.log(`Serveur en écoute sur le port ${port}`);
+    });
+  }
+  
+  module.exports = app; // Export the app for testing
+  
