@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gestion-tickets-it-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gestion-tickets-it
+  template:
+    metadata:
+      labels:
+        app: gestion-tickets-it
+    spec:
+      containers:
+        - name: gestion-tickets-it
+          image: gestion-tickets-it:latest
+          ports:
+            - containerPort: 3000
