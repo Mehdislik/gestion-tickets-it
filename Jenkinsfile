@@ -4,7 +4,7 @@ pipeline {
   environment {
     // Récupération des credentials stockés dans Jenkins
     GITHUB_TOKEN      = credentials('github-token')
-    DOCKER_CREDENTIALS = credentials('docker-registry')
+    DOCKER_CREDENTIALS = credentials('docker-registry-token')   
     SONARQUBE_TOKEN   = credentials('sonarqube-token')
     
     // Remplacez cette URL par l'URL réelle de votre serveur SonarQube
