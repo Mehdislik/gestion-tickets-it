@@ -3,8 +3,7 @@ pipeline {
 
   environment {
     // Récupération des credentials stockés dans Jenkins
-    GITHUB_TOKEN      = credentials('github-token')
-    DOCKER_CREDENTIALS = credentials('docker-registry-token')   
+    DOCKER_CREDENTIALS = credentials('docker-registry-token')
     SONARQUBE_TOKEN   = credentials('sonarqube-token')
     
     // Remplacez cette URL par l'URL réelle de votre serveur SonarQube
@@ -15,7 +14,7 @@ pipeline {
     stage('Checkout') {
       steps {
         // Utilisation du token GitHub pour cloner le repository si nécessaire
-        git url: 'https://github.com/Mehdislik/gestion-tickets-it.git'
+        git url: 'https://github.com/Mehdislik/gestion-tickets-it'
       }
     }
     stage('Install Dependencies & Test') {
