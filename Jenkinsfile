@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        dockerContainer {
-            image 'docker:20.10.16-dind'
-        }
-    }
+    agent any
 
     environment {
         // Credentials stored in Jenkins
